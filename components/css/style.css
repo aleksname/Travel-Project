@@ -3,6 +3,7 @@
     --hoverColor: #635f5f;
     --activeColor: #d7d4d4fe;
     --blueBtn: #0D606F;
+    --blueMainBG: #8b8a7c68;
     --blueBtnHover: #11505b;
     --orangeElement: #F2785C;
 
@@ -13,6 +14,7 @@ body{
     width: 100vw;
     height: 100vh;
     color: var(--mainColor);
+    background: var(--blueMainBG);
 }
 .wrapper {
     display: flex;
@@ -20,7 +22,9 @@ body{
     justify-content: center;
     width: 100%;
     height: 100%;
+    flex-grow: 1; /* Змінюватиме розмір контейнера, щоб відповідати вмісту */
 }
+
 .startScreenBlock{
     background-image: url('/components/img/startPage.png');
     background-size: cover;
@@ -190,20 +194,14 @@ body{
     justify-content: center;
 }
 
-/* [---------travel page-------- */
-.travelPageBlock{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.travelPage{
-    background-image: url('/components/img/travelPage.png');
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
+
 /* ------------------slider----------- */
 
+/* .s{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+} */
 .sliderBlock {
     /* overflow: hidden; */
     /* margin-bottom: 80px; */
@@ -278,4 +276,89 @@ body{
 .stepBtn:active{
     background: var(--blueBtn);
     color: var(--hoverColor);
+}
+
+/* ---------travel page-------- */
+
+.travelPage{
+    background-image: url('/components/img/travelPage.png');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    background: #ffffff91;
+    z-index: 1;
+}
+.travelStories{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.storiesCard {
+}
+.cardImg {
+    margin-right: 40px;
+}
+.storiesTextBlock {
+    display: flex;
+    margin-bottom: 40px;
+}
+.storiesTextInfo{
+    width: 760px;
+}
+.storiesTitle {
+    font-size: 35px;
+    color: var(--blueBtn);
+    margin-bottom: 20px;
+}
+.stiriesSubtitle {
+    font-size: 20px;
+    color: var(--blueBtn);
+}
+.stiriesTextLink{
+    text-decoration: none;
+    color: var(--blueBtn);
+    border-bottom: 2px solid var(--blueBtn);
+}
+
+.stiriesTextLink:hover{
+    color: var(--blueBtnHover);
+    border-bottom: 2px solid var(--blueBtnHover);
+
+}
+/* ---------foter------- */
+
+.footerBlock {
+    /* background: var(--blueBtn); */
+    margin: 0  auto;
+    width: 1200px;
+    padding: 25px 0;
+}
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.safeAllRights {
+    color: var(--blueBtn);
+    font-size: 17px;
+    display: flex;
+    margin: 0 auto;
+}
+.footerContact{
+    color: red;
+    display: flex;
+}
+.contactImg{
+    margin-right: 20px;
+}
+.contactImg:last-child{
+    margin-right: 0;
 }
