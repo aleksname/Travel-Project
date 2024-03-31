@@ -3,6 +3,7 @@
     --hoverColor: #635f5f;
     --activeColor: #d7d4d4fe;
     --blueBtn: #0D606F;
+    --blueMainBG: #8b8a7c68;
     --blueBtnHover: #11505b;
     --orangeElement: #F2785C;
 
@@ -13,6 +14,7 @@ body{
     width: 100vw;
     height: 100vh;
     color: var(--mainColor);
+    background: var(--blueMainBG);
 }
 .wrapper {
     display: flex;
@@ -20,7 +22,9 @@ body{
     justify-content: center;
     width: 100%;
     height: 100%;
+    flex-grow: 1; /* Змінюватиме розмір контейнера, щоб відповідати вмісту */
 }
+
 .startScreenBlock{
     background-image: url('/components/img/startPage.png');
     background-size: cover;
@@ -193,10 +197,11 @@ body{
 
 /* ------------------slider----------- */
 
-.s{
+/* .s{
     display: flex;
     justify-content: center;
-}
+    background: #fff;
+} */
 .sliderBlock {
     /* overflow: hidden; */
     /* margin-bottom: 80px; */
@@ -329,10 +334,10 @@ body{
 /* ---------foter------- */
 
 .footerBlock {
-    background: var(--blueBtn);
+    /* background: var(--blueBtn); */
     margin: 0  auto;
     width: 1200px;
-    height: auto;
+    padding: 25px 0;
 }
 .footerContent {
     display: flex;
@@ -342,7 +347,8 @@ body{
 }
 
 .safeAllRights {
-    color: var(--hoverColor);
+    color: var(--blueBtn);
+    font-size: 17px;
     display: flex;
     margin: 0 auto;
 }
